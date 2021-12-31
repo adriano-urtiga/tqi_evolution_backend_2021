@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="TQI:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>TQI</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="empresa-emprestimo-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="TQI:war exploded" />
+    </root>
+  </artifact>
+</component>
