@@ -11,8 +11,8 @@ import java.sql.SQLException;
 public class EmpDao {
     public int registrarEmprestimo(Emprestimo emprestimo) throws ClassNotFoundException {
         String INSERT_USERS_SQL = "INSERT INTO tabela_emprestimo" +
-                "  (valor, quantidade_parcelas, data) VALUES " +
-                " (?,?, ?);";
+                "  (valor, quantidade_parcelas, data, id_emprestimo) VALUES " +
+                " (?,?, ?, ?);";
 
         int result = 0;
 
@@ -27,6 +27,8 @@ public class EmpDao {
             preparedStatement.setFloat(1, emprestimo.getValor());
             preparedStatement.setInt(2, emprestimo.getQtdparcelas());
             preparedStatement.setString(3, emprestimo.getDataemp());
+            preparedStatement.setInt(4, emprestimo.getIdEmp());
+
 
             System.out.println(preparedStatement);
             // Step 3: Execute the query or update query

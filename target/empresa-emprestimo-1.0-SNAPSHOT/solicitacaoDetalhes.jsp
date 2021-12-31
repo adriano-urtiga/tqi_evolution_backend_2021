@@ -10,6 +10,11 @@
 <div align="center">
     <h1>Emprestimo solicitado com sucesso!</h1>
     <br/><a href="paginaInicialCliente.jsp">Voltar para a pagina do cliente</a>
+    <%
+        String idEnviar = session.getAttribute("idEnviar").toString();
+        session.setAttribute("idEnviar", idEnviar);
+        out.print("id: "+ idEnviar);
+    %>
 </div>
 </body>
 </html>

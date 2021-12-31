@@ -8,6 +8,7 @@ public class Emprestimo  implements Serializable {
     private float valor;
     private int qtdparcelas;
     private String dataemp;
+    private int idEmp;
 
     public float getValor() {
         return valor;
@@ -31,5 +32,13 @@ public class Emprestimo  implements Serializable {
 
     public void setDataemp(String dataemp) {
         this.dataemp = dataemp;
+    }
+
+    public int getIdEmp() {
+        return idEmp;
+    }
+
+    public void setIdEmp(int idEmp) {
+        this.idEmp = idEmp;
     }
 }

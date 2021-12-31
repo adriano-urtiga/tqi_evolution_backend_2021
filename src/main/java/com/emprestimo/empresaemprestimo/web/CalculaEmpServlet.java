@@ -21,14 +21,18 @@ public class CalculaEmpServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        HttpSession session = request.getSession();
+
         float valorx = Float.parseFloat(request.getParameter("valorEmp"));
         int qtdparcelasx = Integer.parseInt(request.getParameter("quantidadeParcelas"));
         String dataempx = request.getParameter("dataEmp");
+        int idempx = Integer.parseInt((String) session.getAttribute("idEnviar"));
 
         Emprestimo emprestimo = new Emprestimo();
         emprestimo.setValor(valorx);
         emprestimo.setQtdparcelas(qtdparcelasx);
         emprestimo.setDataemp(dataempx);
+        emprestimo.setIdEmp(idempx);
 
         try {
             empDao.registrarEmprestimo(emprestimo);

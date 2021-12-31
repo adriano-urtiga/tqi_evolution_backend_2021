@@ -22,13 +22,15 @@
                 <td>Quantidade de parcelas</td>
                 <td><input type="number" name="quantidadeParcelas" /></td>
             </tr>
+            <% String idEnviar = session.getAttribute("idEnviar").toString(); %>
+
 
 
         </table>
         <input type="submit" value="Solicitar" />
         <br/><a href="paginaInicialCliente.jsp">Voltar para pagina do cliente</a>
     </div>
-    <% String idEnviar = session.getAttribute("idEnviar").toString(); %>
+
     ID = <%= idEnviar %>
 
 
