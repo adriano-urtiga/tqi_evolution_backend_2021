@@ -8,20 +8,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <link rel="stylesheet" href="/css/style.css">
     <title>Title</title>
 </head>
 <body>
     <div align="center">
-        <h1>Página do Usuário</h1>
+        <h1>Página do Cliente</h1>
         <%
             String idEnviar = session.getAttribute("idEnviar").toString();
             session.setAttribute("idEnviar", idEnviar);
-            out.print("id: "+ idEnviar);
         %>
         <form action="solicitarEmprestimo.jsp" method="post">
             <input type="submit" value="Solicitar um Empréstimo">
         </form>
-
+        <%
+            request.setAttribute("idEnviar", idEnviar);
+        %>
 
         <br/><a href="listaEmprestimo.jsp">Acompanhamento das solicitações de empréstimo</a>
 
