@@ -10,10 +10,15 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <html>
 <head>
-    <title>Detalhes do Emprestimo Selecionado</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Detalhes do Empréstimo Selecionado</title>
 </head>
 <body>
+<div class="p-3 mb-2 bg-dark text-danger">
+    <H3>BBI-EMPRÉSTIMOS</H3>
+</div>
+<div align="center" class="container">
+    <h1>Detalhes do Empréstimo Selecionado</h1>
     <sql:setDataSource
             var="myDS"
             driver="com.mysql.jdbc.Driver"
@@ -24,8 +29,8 @@
         SELECT email, renda, id, valor, quantidade_parcelas, data, codigo_emprestimo from tabela_emprestimo, tabelacliente where id=id_emprestimo and codigo_emprestimo=?
         <sql:param value="${param.id}" />
     </sql:query>
-    <div align="center">
-        <table>
+    <div>
+        <table style="margin: auto; display: table"  class="table table-dark table-striped">
             <tr>
                 <th>Código do Empréstimo</th>
                 <th>Valor(R$)</th>
@@ -48,6 +53,7 @@
             </c:forEach>
     </table>
     </div>
-    <br/><a href="listaEmprestimo.jsp">Voltar para lista de empréstimos</a>
+    <br/><a href="listaEmprestimo.jsp">Voltar para a lista de empréstimos</a>
+</div>
 </body>
 </html>

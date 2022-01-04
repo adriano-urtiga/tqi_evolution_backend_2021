@@ -9,64 +9,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="ISO-8859-1">
-    <title>Insert title here</title>
+    <title>Cadastro</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <div class="p-3 mb-2 bg-dark text-danger">
+        <H3>BBI-EMPRÉSTIMOS</H3>
+    </div>
 </head>
 <body>
-<div align="center">
-    <h1>Employee Register Form</h1>
-    <form action="<%= request.getContextPath() %>/registrar" method="post">
-        <table>
-            <tr>
-                <td>Nome</td>
-                <td><input type="text" name="nome" /></td>
-            </tr>
-            <tr>
-                <td>Sobrenome</td>
-                <td><input type="text" name="sobreNome" /></td>
-            </tr>
-            <tr>
-                <td>E-mail</td>
-                <td><input type="text" name="email" /></td>
-            </tr>
-            <tr>
-                <td>Senha</td>
-                <td><input type="password" name="senha" /></td>
-            </tr>
-            <tr>
-                <td>RG</td>
-                <td><input type="number" name="rg" /></td>
-            </tr>
-            <tr>
-                <td>CPF</td>
-                <td><input type="number" name="cpf" /></td>
-            </tr>
-            <tr>
-                <td>Renda</td>
-                <td><input type="number" name="renda" /></td>
-            </tr>
-            <tr>
-                <td>Cidade</td>
-                <td><input type="text" name="cidade" /></td>
-            </tr>
-            <tr>
-                <td>Estado</td>
-                <td><input type="text" name="estado" /></td>
-            </tr>
-            <tr>
-                <td>Rua</td>
-                <td><input type="text" name="rua" /></td>
-            </tr>
-            <tr>
-                <td>Número</td>
-                <td><input type="number" name="numero" /></td>
-            </tr>
+<div class="container" align="center">
+    <h1>Cadastro do Cliente</h1>
+    <form  action="<%= request.getContextPath() %>/registrar" method="post">
+        <div style="width: 500px; " class="list-group">
 
-        </table>
-        <input type="submit" value="Registar" />
+            <a  class="list-group-item list-group-item-action" aria-current="true">
+                <label>Nome</label>
+                <input type="text" name="nome" />
+            </a>
+            <a class="list-group-item list-group-item-action " aria-current="true">
+                <label>Sobrenome</label>
+                <input type="text" name="sobreNome" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>E-mail</label>
+                <input type="text" name="email" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>Senha</label>
+                <input type="password" name="senha" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>RG</label>
+                <input type="number" name="rg" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>CPF</label>
+                <input type="number" name="cpf" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>Renda</label>
+                <input type="number" name="renda" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>Cidade</label>
+                <input type="text" name="cidade" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>Estado</label>
+                <input type="text" name="estado" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>Rua</label>
+                <input type="text" name="rua" />
+            </a>
+            <a  class="list-group-item list-group-item-action " aria-current="true">
+                <label>Número</label>
+                <input type="number" name="numero" />
+            </a>
+        </div>
 
+        <input style="width: 500px;" class="btn btn-success" type="submit" value="Registar" />
     </form>
-    <br/><a href="deslogar.jsp">Voltar para a pagina de inicial</a>
+
+        <form action="deslogar.jsp">
+            <input style="width: 500px;" class="btn btn-warning"  type="submit" value="Voltar para a pagina de inicial">
+        </form>
+
+
 </div>
 </body>
 </html>
